@@ -1,11 +1,14 @@
+//6:01:46
 import React, { useState } from 'react'
 import { FaGoogle } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { useForm } from "react-hook-form";
+import { useAuth } from '../context/AuthContext';
 
 const Register = () => {
     
     const [message, setMessage] = useState("");
+    const {registerUser} = useAuth()
     const {
         register,
         handleSubmit,
